@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Sunny Danceradio</title>
+   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Load FontAwesome icons -->
+  <link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ 
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+
+  
+
+
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0; z-index: 1;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav" id = "myHeader">
+   <h1 class="header"> <a href="#home" class="active"><img class= "logo" src= "Sunny dance radio.png"><img class= "mid" src= "images\star3.png">
+
+</a> </h1>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    
+  <a href="Index.html">Home<img class= "dwarf" src= "images\red star3.png"></a>
+  
+<a href="https://sunnyjazzradio.netlify.app/index.html">Sunny Jazzradio<img class= "lin" src= "images\Sunny6.png"></a>
+    <a href="https://sunnyrockradio.netlify.app/index.html">Sunny Rockradio<img class= "lin" src= "images\Sunny5.png"></a>
+  
+
+
+
+</div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
+     <img class= "ham"  src="menu-icon.png">
+  </a>
+</div>
+
+</head>
+
+<body>
+
+<div class = "arrow">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p id="now"></p>
+
+
+<div class="player">
+ 
+    <!-- Define the section for displaying details -->
+    <div class="details">
+      <div class="now-playing">PLAYING x OF y</div>
+      <div class="track-art"></div>
+      <div class="track-name">Track Name</div>
+      <div class="track-artist">Track Artist</div>
+    </div>
+ 
+    <!-- Define the section for displaying track buttons -->
+    <div class="buttons">
+    
+      <div class="playpause-track" onclick="playpauseTrack()">
+     
+<img class= "media"  src="play.png">
+    
+</div>
+     
+    </div>
+
+    <!-- Define the section for displaying the seek slider-->
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100"
+        value="0" class="seek_slider" >
+      <div class="total-duration">00:00</div>
+    </div>
+ 
+    <!-- Define the section for displaying the volume slider-->
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100"
+        value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+
+
+
+</div>
+  <br>
+
+<br>
+<div>
+<img class= "astro"  src="images\red star2.png">
+</div>
+ </div>
+<p id= "live"> </p>
+<img id= "myImage">
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p id="events">
+
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div>
+<img id= "hero-image">
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h5 class="inch"><em> Playlist</em></h5>
+
+
+<ul id="list">
+
+<ol>
+
+<li id="snoop">  <img class= "ster" src= "star.png">  </li>
+
+
+<li id= "rose">  <img class= "ster" src= "star.png"> </li>
+
+<li id= "herb">  <img class= "ster" src= "star.png">   </li>
+
+
+
+
+<li id="contrast">   <img class= "ster" src= "star.png">  </li>
+
+
+<li id="tina">  <img class= "ster" src= "star.png">  </li>
+
+
+
+<li id="it">  <img class= "ster" src= "star.png"></li>
+
+<li id="nv">  <img class= "ster" src= "star.png">  </li>
+
+
+<li id="booker">  <img class= "ster" src= "star.png">     </li>
+
+
+<li id="gun"> <img class= "ster" src= "star.png">   </li>
+
+
+<li id="yello">  <img class= "ster" src= "star.png">   </li>
+
+<details class="voer">
+<summary class="sum">More</summary>
+<br>
+
+
+<li id="mond"> <img class= "ster" src= "star.png"> </li>
+
+<li id="legend">   <img class= "ster" src= "star.png">     </li>
+
+
+
+
+
+
+<li id= "sugar">  <img class= "ster" src= "star.png">  </li>
+
+
+
+
+<li id="XCX">   <img class= "ster" src= "star.png">  </li>
+
+
+
+
+
+<li id="sweet" >  <img class= "ster" src= "star.png">    </li>
+
+
+<li id="September">  <img class= "ster" src= "star.png">     </li>
+
+
+<li id="rule"> <img class= "ster" src= "star.png">    </li>
+
+
+<li id="fall">  <img class= "ster" src= "star.png">   </li>
+
+<li id="was"> <img class= "ster" src= "star.png">  </li>
+
+<li id="good">   <img class= "ster" src= "star.png">       </li>
+
+<details class="voer">
+<summary class="sum">More</summary>
+<br>
+
+<li id="troye">    <img class= "ster" src= "star.png">    </li>
+
+
+
+
+<li id="shake"> <img class= "ster" src= "star.png">   </li>
+
+
+<li id="energy" > <img class= "ster" src= "star.png">   </li>
+
+
+
+
+
+
+
+<li  id="salt"><img class= "ster" src= "star.png"> </li>
+<li id="hazel"> <img class= "ster" src= "star.png">    </li>
+
+
+<li id="toni">  <img class= "ster" src= "star.png">      </li>
+
+
+<li id="brax"> <img class= "ster" src= "star.png">    </li>
+
+
+    <li id="chinese"><img class= "ster" src= "star.png">  </li>
+
+<li id="round"> <img class= "ster" src= "star.png">    </li>
+
+<li id="smooth">  <img class= "ster" src= "star.png">           </li>
+
+
+
+
+
+
+
+</ol>
+
+</ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div>
+
+
+
+<h5 class= "inch"> <em>Amsterdam Nightlife</em></h5>
+<br>
+
+
+<iframe class= "frame" src="https://www.uitzinnig.nl/feest-dans-party-agenda.aspx" title="Iframe Example"></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div>
+
+<h5 id="twin"><em>Sunny Talent</em></h5>
+ <br>
+<br>
+<img id= "play">
+
+
+<br>
+<br>
+<br>
+<br>
+<img id= "travolta">
+<br>
+<br>
+<br>
+<br>
+<img id= "max">
+
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<audio  class="public" controls="controls" autoplay loop>
+ <source src="" type="audio/mpeg" />
+   <source src="Sunny radio jingle6.mp3" type="audio/wav" />
+</audio>
+
+
+<div>
+<h5 class="inch"><em>Weather Forecast</em></h5>
+<br>
+
+<IFRAME class="weather" SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
+</div>
+  
+<br>
+<br>
+<br>
+<br>
+
+
+<script src="main2.js"></script>
+
+
+
+
+<script> 
+document.getElementById("events").innerHTML="<em><bold><u>Upcoming Events</em></bold></u><br><br>16.00 - 19.00 :<br> <br>Miss Monique <br>Dance Hall Days<br><br>19.00 - 3.00 :<br> <br>DJ 'S<br> Dance Maniac"; 
+</script>
+
+
+
+
+
+
+<script> 
+document.getElementById("now").innerHTML="<em>now playing:</em>"; 
+</script>
+<script> 
+document.getElementById("live").innerHTML="<em>live: Miss Monique</em>";
+</script>
+
+
+
+
+
+
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("myImage");
+
+//Set the src property of our element to the new image URL
+img.src = 'images/Sunny DanceRadio.gif';
+</script>
+
+
+
+
+
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("hero-image");
+
+//Set the src property of our element to the new image URL
+img.src = 'images/Michael friendly.png';
+</script>
+
+
+
+
+
+
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("max");
+
+//Set the src property of our element to the new image URL
+img.src = 'images/Ava Max.png';
+</script>
+
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("travolta");
+
+//Set the src property of our element to the new image URL
+img.src = 'images/Bebe Rexha.png';
+</script>
+
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("play");
+
+//Set the src property of our element to the new image URL
+img.src = 'images/sunny stars.png';
+</script>
+
+
+
+
+
+
+<script> 
+document.getElementById("snoop").innerHTML="Simply Red - Money's too tight (to mention)"; 
+document.getElementById("rose").innerHTML="Vaughan  Mason & Crew - Bounce skate roll"; 
+document.getElementById("herb").innerHTML="The Sun - Radiation Level"; 
+document.getElementById("contrast").innerHTML="Hamila Cabello, Maria Becerra - Hasta Los Dientes"; 
+document.getElementById("tina").innerHTML="MO - Goosebumps"; 
+document.getElementById("it").innerHTML="Bebe Rexha - Sacrifice"; 
+document.getElementById("nv").innerHTML="Visage - Fade to Grey"; 
+document.getElementById("booker").innerHTML="Troye Sivan - 1999"; 
+document.getElementById("gun").innerHTML="Bob Harsher - Autonomy"; 
+document.getElementById("yello").innerHTML="Charli XCX - Good Ones"; 
+
+document.getElementById("mond").innerHTML="Shouse - Love tonight"; 
+document.getElementById("legend").innerHTML="Joel Corry - I wish"; 
+document.getElementById("sugar").innerHTML="Angie Stone - Wish I Didn't Miss You"; 
+document.getElementById("XCX").innerHTML="Lenny Kravitz - Low"; 
+document.getElementById("sweet").innerHTML="Joss Stone - The Love We Had"; 
+document.getElementById("September").innerHTML="Carleen Anderson - Stories"; 
+document.getElementById("rule").innerHTML="Grace Jones - La Vie En Rose"; 
+document.getElementById("fall").innerHTML="Best motown classic songs 60's 70's "; 
+document.getElementById("was").innerHTML="Quazar - Seven Stars  (Dragon Figthers)"; 
+document.getElementById("good").innerHTML="Gwen McCrae - Keep the fire Burning"; 
+
+
+document.getElementById("troye").innerHTML="Elton & Dua - Cold Heart"; 
+document.getElementById("shake").innerHTML=" D-Shake - Techno Trance Yaaah"; 
+document.getElementById("energy").innerHTML=" Cafe del Mar - Energy  52"; 
+document.getElementById("salt").innerHTML=" Chicane - Saltwater"; 
+document.getElementById("hazel").innerHTML="Toni Braxton - Un-break my heart "; 
+document.getElementById("toni").innerHTML="Toni Braxton - You're makin' me high"; 
+document.getElementById("brax").innerHTML="Full Flava - Chinese Whispers"; 
+document.getElementById("chinese").innerHTML="Full Flava - Round and round"; 
+document.getElementById("round").innerHTML="Belters only feat. Jazzy - make me feel good"; 
+document.getElementById("smooth").innerHTML="MLA - Ship wrek"; 
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

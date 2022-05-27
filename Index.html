@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<title> Sunny Hotradio</title>
+ <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<!-- Load FontAwesome icons -->
+  <link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ 
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+    
+ <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px; 
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;z-index: 1;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav" id="myHeader" >
+  <h1 class="header"> <a href="#home" class="active"> <img class= "logo" src= "Sunny hotradio.png"><img class= "licht" src= "images\star3.png"></h1> 
+ 
+<!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+
+<a href="Index.html">Home</a>
+    <a href="contact.html">Contact </a>
+    <a href="about us.html">About us</a>
+
+
+
+</div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
+    <img class= "ham"  src="menu-icon.png">
+  </a>
+</div>
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+ <div>
+<br>
+<br>
+<br>
+<br>
+
+<h2>WELCOME TO SUNNY HOTRADIO 24/7</h2>
+</div>
+
+
+
+
+<h5 class="balk"></h5>
+<br>
+<br>
+<br>
+<div>
+
+
+<h5 class="one">1</h5>
+<a href= "https://sunnyjazzradio.netlify.app"><img class= "classic"  src="classic jazz.png"></a>
+</div>
+<br>
+<br>
+<br>
+<p class="balk"></p>
+
+
+
+
+<div>
+<h5 class="two">2</h5>
+<br>
+<a href= "https://sunnyhotradio.netlify.app/med02.html"><img class= "dance"  src="Dance radio.png"></a>
+</div>
+<br>
+<br>
+
+<h5 class="balk"></h5>
+<br>
+<br>
+<div>
+<h5 class="three">3</h5>
+<a href= "https://sunnyrockradio.netlify.app"><img class= "rock"  src="Rock2.png"></a>
+</div>
+<br>
+<br>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<h5 class="balk"></h5>
+
+<br>
+
+
+<br>
+
+
+<audio  class="public" controls="controls" autoplay loop>
+ <source src="" type="audio/mpeg" />
+   <source src="Sunny radio jingles.mp3" type="audio/wav" />
+</audio>
+
+<div>
+<h5> Sunny Hotradio Studios</h5>
+
+<img class= "studio"  src="images\Sunny Hotradio studios.png">
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div class="grid-container">
+<div class="item footer">
+
+
+<br>
+
+
+
+<br>
+<img class="bull" src= "images\bullseye-59-376797.png">
+© 2022 Bullseye Productions<br>
+Clientservice: 0640983959<br>
+The Netherlands<br>
+No Rights Reserved<br>
+
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<a href= "https://www.w3schools.com/">
+<img class= "school" src="images\W3 schools.png">
+</a>
+<br>
+<br>
+
+
+
+<a href= "https://www.luisterrijk.nl/">
+<img class= "luister" src="images\luisterrijk.png">
+</a>
+<br>
+<br>
+<br>
+<br>
+<a href= "https://getmimo.com/">
+<img class= "mimo" src="images\mimo.png">
+</a>
+<br>
+<br>
+<br>
+<br>
+<a href= "https://kvms.be/">
+<img class= "kvms" src="images\kvms.png">
+</a>
+
+
+</div>
+
+<script src= "main.js"> </script>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
